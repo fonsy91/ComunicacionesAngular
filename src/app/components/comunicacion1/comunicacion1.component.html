@@ -1,1 +1,15 @@
-<p>comunicacion1 works!</p>
+<div class="container">
+    <h1>COMUNICACIÓN INPUT</h1>
+    <br>
+    <p ng-non-bindable>
+        Primero insertamos un componente hijo en este componente padre, despues en el componente 
+        hijo se agrega el decorador @Input para transmitir informacion del componente padre al 
+        componente hijo. Hay que crearse una variable del tipo de informacion que vayas a enviar en cada uno de los componentes.ts
+        tanto en el padre como en el hijo y en la etiqueta del hijo la que esta inyectada en el componente padre 
+        agregar lo siguiente: [mensajeParaPadre]="mensajePadre", en este caso [mensajeParaPadre] es la variable
+        creada en el hijo mientras que mensajePadre es la variable creada en el padre.
+    </p>
+    <app-hijo1 [mensajeParaPadre]="mensajePadre" [objetoPadre]="datosPersonales"></app-hijo1>
+    <button (click)="enviarMensajeNuevo()">Cambiar Mensaje</button>
+    <br>
+</div>

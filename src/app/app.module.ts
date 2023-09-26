@@ -9,10 +9,11 @@ import { Comunicacion2Component } from './components/comunicacion2/comunicacion2
 import { Comunicacion3Component } from './components/comunicacion3/comunicacion3.component';
 import { RouterModule, Routes } from '@angular/router';
 import { homeComponent } from './components/home/home.component';
+import { Hijo1Component } from './components/hijo1/hijo1.component';
 
 const routes: Routes = [
   { path: '', component: homeComponent },
-  { path: 'comunicacion1', component: Comunicacion1Component },
+  { path: 'Input', component: Comunicacion1Component },
 ];
 
 @NgModule({
@@ -21,7 +22,8 @@ const routes: Routes = [
     Comunicacion1Component,
     Comunicacion2Component,
     Comunicacion3Component,
-    homeComponent
+    homeComponent,
+    Hijo1Component
   ],
   imports: [
     BrowserModule,
