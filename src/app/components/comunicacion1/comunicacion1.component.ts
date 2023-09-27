@@ -19,9 +19,15 @@ export class Comunicacion1Component {
     telefono: 618294215
   }
 
+  mensajeDesdePadre: string = "";
+
   //Metodo que envia el mensaje al hijo
   enviarMensajeNuevo() {
     this.mensajePadre = "Te envio un saludo";
+  }
+
+  receiveMessage(message: string) {
+    this.mensajeDesdePadre = message;
   }
 
 }

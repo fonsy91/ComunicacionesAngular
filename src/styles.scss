@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+pre {
+    white-space: pre-wrap; /* Ajustar el contenido del cuadro */
+}
+  
+code {
+    display: block; /* Hacer que el elemento <code> sea de bloque para ajustar la anchura automáticamente */
+}
+
+pre.language-javascript {
+    font-size: 12px; /* Tamaño de fuente deseado */
+}
+  
+/* Cambiar el tamaño del texto en la etiqueta <code> */
+code.language-javascript {
+    font-size: 12px; /* Tamaño de fuente deseado */
+}

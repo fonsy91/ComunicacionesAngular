@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>COMUNICACIÓN INPUT</h1>
+    <h1>COMUNICACIÓN INPUT y OUTPUT</h1>
     <br>
     <p ng-non-bindable>
         Primero insertamos un componente hijo en este componente padre, despues en el componente 
@@ -9,7 +9,21 @@
         agregar lo siguiente: [mensajeParaPadre]="mensajePadre", en este caso [mensajeParaPadre] es la variable
         creada en el hijo mientras que mensajePadre es la variable creada en el padre.
     </p>
-    <app-hijo1 [mensajeParaPadre]="mensajePadre" [objetoPadre]="datosPersonales"></app-hijo1>
-    <button (click)="enviarMensajeNuevo()">Cambiar Mensaje</button>
+    <p>Mensaje desde padre a hijo:</p>
+    <app-hijo1 [mensajeDesdePadre]="mensajePadre" [objetoPadre]="datosPersonales"></app-hijo1>
+    <button (click)="enviarMensajeNuevo()">Cambiar Mensaje Padre</button>
+    <br><br>
+    <p>Mensaje del Hijo: </p>
+    <app-hijo1 (mensajeParaPadre1)="receiveMessage($event)"></app-hijo1>
+    <p>{{ mensajeDesdePadre }}</p>
     <br>
+    
+    <code class="language-typescript">
+        // Comunicaion @Input
+        const greeting = 'Hello, world!';
+        console.log(greeting);
+    </code>
+    
+
 </div>
+
