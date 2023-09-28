@@ -1,16 +1,18 @@
-pre {
-    white-space: pre-wrap; /* Ajustar el contenido del cuadro */
-}
+.codigoDestacado {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+  }
   
-code {
-    display: block; /* Hacer que el elemento <code> sea de bloque para ajustar la anchura automáticamente */
-}
-
-pre.language-javascript {
-    font-size: 12px; /* Tamaño de fuente deseado */
-}
+  /* Estilos personalizados para el código resaltado */
+  .codigoDestacado pre {
+    margin: 0;
+  }
   
-/* Cambiar el tamaño del texto en la etiqueta <code> */
-code.language-javascript {
-    font-size: 12px; /* Tamaño de fuente deseado */
-}
+  /* Estilos personalizados para las clases generadas por Prism */
+  .codigoDestacado pre code {
+    font-size: 14px;
+    font-family: "Courier New", Courier, monospace;
+    color: #333;
+  }

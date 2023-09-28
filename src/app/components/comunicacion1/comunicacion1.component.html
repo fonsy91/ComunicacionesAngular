@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>COMUNICACIÓN INPUT y OUTPUT</h1>
+    <h1>COMUNICACIÓN INPUT Y OUTPUT</h1>
     <br>
     <p ng-non-bindable>
         Primero insertamos un componente hijo en este componente padre, despues en el componente 
@@ -18,12 +18,10 @@
     <p>{{ mensajeDesdePadre }}</p>
     <br>
     
-    <code class="language-typescript">
-        // Comunicaion @Input
-        const greeting = 'Hello, world!';
-        console.log(greeting);
-    </code>
-    
-
+    <div class="codigoDestacado">
+        <pre><code appResaltado [code]="codigoInput"></code></pre>
+        <pre><code appResaltado [code]="codigoOutput"></code></pre>
+    </div>
+    <br>
 </div>
 

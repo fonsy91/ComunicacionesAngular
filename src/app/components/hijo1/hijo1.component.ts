@@ -16,7 +16,7 @@ export class Hijo1Component implements OnInit{
 
   //Mensaje que vamos a enviar al padre
   @Output() mensajeParaPadre1 = new EventEmitter<string>();
-  @Output() mensajeParaPadre3: string = "";
+  //@Output() mensajeParaPadre3: string = "";
 
   ngOnInit(): void {
     console.log(this.objetoPadre);

@@ -1,1 +1,17 @@
-<p>comunicacion3 works!</p>
+<div class="container">
+    <h1>COMUNICACIÓN RUTA</h1>
+    <br>
+    <p ng-non-bindable>
+        Lo primero que hay que hacer es configurar las rutas en tu aplicacion tanto
+        o en el routing module o en aap.module. En el componente que va a transmitir
+        la informacion a traves de la ruta debera inyectar en el constructor Router
+        y usar navigate pasandole como parametros la ruta y el nombre de lo que se le
+        quiere pasar (lo que hemos puesto en la ruta) ejemplo: this.router.navigate(['/hijo', mensaje]);
+        Finalmente en el componente donde vas a obtener los datos de la ruta inyectamos ActivatedRoute 
+        y utilizamos route.snapshot.paramMap.get('mensaje') dentro del parentesis entre las comillas
+        va el mismo nombre que le hemos puesto al paraetro en la ruta.
+    </p>
+
+    <app-hijo3></app-hijo3>
+
+</div>
