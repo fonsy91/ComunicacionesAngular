@@ -6,14 +6,52 @@
         (Subjects) para crear un flujo de datos que permita a los componentes compartir información de manera 
         reactiva. En este caso no es obligatorio pero es muy recomendable usar un servicio para realizar la 
         transmision de datos entre componentes en este caso haremos la comunicacion sin servicio y con servicio.
-        
     </p>
+    <p>
+        Antes hay que tener claro la diferencia entre la utilizacion de Subject y BehaviorSubject ambos se usan para
+        crear flujos de datos observables pero tienen diferencias:
+    </p>
+    <h5>Subject</h5>
+    <ul>
+        <li>Permite emitir y transmitir valores a multiples observables.</li>
+        <li>No tiene un valor inicial, es decir cuando un observador se suscribe no recibe un valor hasta que se emite uno.</li>
+        <li>Si un observador se suscribe a un Subject y este ya ha emito un valor el observador no recibira nada. Es decir
+            si se emite un valor antes de que el observador observe nunca le llegara ese valor. Para evitar este tipo de cosas 
+            se pueden utilizar los BehaviorSubject o ReplaySubject
+        </li>
+        <li>Los nuevos observadores solo recibiran los valores emitidos despues de su sucripcion</li>
+    </ul>
+    <br>
+    <h5>BehaviorSubject</h5>
+    <ul>
+        <li>Tiene un valor inicial y almacena el ultimo valor emitido</li>
+        <li>Cuando un observador se suscribe a un BehaviorSubject inmediatamente recibe el valor actual almacenado</li>
+        <li>Si un observador se suscribe a un BehaviorSubject despues de que este haya emitido varios valores, aun 
+            recibira el ultimo valor emitido y luego cualquier valor adicional que se emita.
+        </li>
+        <li>Los nuevos observadores siempre obtienen al menos el último valor emitido</li>
+    </ul>
+    <br>
+    <h5>ReplaySubject</h5>
+    <ul>
+        <li>almacena un historial de valores emitidos y permite que los observadores nuevos accedan a esos valores cuando se suscriben.</li>
+        <li>Puedes especificar el tamaño del historial al crear un ReplaySubject. Por ejemplo, new ReplaySubject(2) almacenará los últimos 2 
+            valores emitidos en el historial.
+        </li>
+        <li>
+            Cuando un observador se suscribe a un ReplaySubject, recibe no solo los valores emitidos después de su suscripción, sino 
+            también los valores previamente emitidos en el historial hasta el tamaño especificado.
+        </li>
+    </ul>
+    <br>
+    <div class="codigoDestacado">
+            <pre><code appResaltado [code]="codigoMetodosRxjs"></code></pre>
+    </div>
+    <br>
     <app-hijo4></app-hijo4>
     <br>
     <div class="codigoDestacado">
-        <!--
-            <pre><code appResaltado [code]="codigoRuta"></code></pre>
-        -->
+            <pre><code appResaltado [code]="codigoRxjs"></code></pre>
     </div>
     <br>
 </div>

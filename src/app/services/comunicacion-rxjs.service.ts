@@ -13,10 +13,12 @@ export class ComunicacionRxjsService {
   constructor() { }
 
   enviarMensaje(mensaje: string) {
+    //this.mensajeSubject.next(mensaje);
     this.mensajeSubject2.next(mensaje);
   }
 
   recibirMensaje(): Observable<string> {
+    //return this.mensajeSubject.asObservable();
     return this.mensajeSubject2.asObservable();
   }
 

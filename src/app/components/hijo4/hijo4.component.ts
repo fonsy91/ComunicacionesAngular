@@ -36,17 +36,6 @@ export class Hijo4Component implements OnInit{
     });
   }
 
-  //Metodo que retrasa el programa un segundo
-  realizarAccionConRetraso() {
-    // Crea un observable que emite un valor después de un segundo de retraso
-    of('Acción realizada después de un segundo').pipe(
-      delay(2000) // Delay de 1000 milisegundos (1 segundo)
-    ).subscribe((resultado) => {
-      console.log(resultado);
-      // Aquí puedes realizar la acción deseada después del retraso
-    });
-  }
-
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
