@@ -15,6 +15,8 @@ import { Hijo3Component } from './components/hijo3/hijo3.component';
 import { ResaltadoDirective } from './directivas/resaltado.directive';
 import { Comunicacion4Component } from './components/comunicacion4/comunicacion4.component';
 import { Hijo4Component } from './components/hijo4/hijo4.component';
+import { Comunicacion5Component } from './components/comunicacion5/comunicacion5.component';
+import { Hijo5Component } from './components/hijo5/hijo5.component';
 
 const routes: Routes = [
   { path: '', component: homeComponent },
@@ -22,6 +24,7 @@ const routes: Routes = [
   { path: 'Servicio', component: Comunicacion2Component },
   { path: 'Ruta/:mensaje', component: Comunicacion3Component },
   { path: 'RxJs', component: Comunicacion4Component },
+  { path: 'ViewChildChildren', component: Comunicacion5Component },
 ];
 
 @NgModule({
@@ -36,7 +39,9 @@ const routes: Routes = [
     Hijo3Component,
     ResaltadoDirective,
     Comunicacion4Component,
-    Hijo4Component
+    Hijo4Component,
+    Comunicacion5Component,
+    Hijo5Component
   ],
   imports: [
     BrowserModule,

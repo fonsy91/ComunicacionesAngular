@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>COMUNICACIÓN ViewChild y ViewChildren</h1>
+    <br>
+    <p ng-non-bindable>
+        son decoradores que se utilizan para acceder a elementos del DOM (Document Object Model) o componentes 
+        hijos desde un componente padre. La comunicación se puede lograr mediante la obtención de referencias 
+        a componentes hijos o elementos del DOM en un componente padre y luego interactuando con ellos. No
+        se suele utilizar esto para comunicacion entre componentes lo normal es usar un servicio, RxJs entro
+        otros. Para este caso usaremos ViewChild y ViewChildren para la comunicacion entre un <b>padre y un hijo</b>
+    </p>
+    <br>
+    <button (click)="mandarMsjAHijo()">Enviar Mensaje al Hijo</button>
+    <br><br>
+    <app-hijo5 #refHijo></app-hijo5>
+    <br>
+    <div class="codigoDestacado">
+            <pre><code appResaltado [code]="codigoViewChild"></code></pre>
+    </div>
+    <br>
+</div>
